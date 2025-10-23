@@ -25,6 +25,22 @@ dependências nativas — basta abrir o endereço local no browser para usar.
    ```
 3. Abra `http://localhost:3000` no navegador para explorar o protótipo.
 
+### Como testar e validar
+
+Atualmente ainda não existem testes automatizados de interface ou unidade. Para garantir que o
+projeto está estável após alterações, execute as verificações de lint do Next.js:
+
+```bash
+pnpm lint
+```
+
+O comando analisa a base React/TypeScript e aponta problemas de acessibilidade, performance ou
+melhores práticas. Caso prefira `npm` ou `yarn`, substitua por `npm run lint` ou `yarn lint`.
+
+Enquanto os testes E2E não são implementados, recomenda-se também abrir o app em `localhost:3000`
+e navegar pelas seções principais (Visão Anual, Painel de Tarefas, Booking) para validar o fluxo
+visual.
+
 ### Build de produção
 
 ```bash
