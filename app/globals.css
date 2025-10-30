@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-zinc-100 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50;
+  font-family: var(--font-sans);
+}
+
+main {
+  min-height: 100vh;
+}
+
+[data-theme="emerald"] {
+  --accent: 16 185 129;
+}
+
+[data-theme="violet"] {
+  --accent: 139 92 246;
+}
+
+[data-theme="cyan"] {
+  --accent: 34 211 238;
+}
+
+.gradient-surface {
+  background: linear-gradient(
+    145deg,
+    rgba(var(--accent, 139 92 246), 0.22),
+    rgba(24, 24, 27, 0.78)
+  );
+}
+
+.card-glass {
+  @apply rounded-3xl border border-white/10 bg-white/60 p-6 shadow-xl shadow-black/10 backdrop-blur;
+}
+
+.dark .card-glass {
+  @apply border-white/5 bg-white/5;
+}
+
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.section-title {
+  @apply text-balance text-2xl font-semibold tracking-tight sm:text-3xl;
+}
+
+.section-subtitle {
+  @apply text-pretty text-sm text-zinc-500 dark:text-zinc-400;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full border border-zinc-200 px-2.5 py-0.5 text-xs font-medium uppercase tracking-wide text-zinc-600 transition-colors dark:border-zinc-800 dark:text-zinc-300;
+}
+
+.badge-pill {
+  @apply rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-zinc-700 shadow-sm shadow-black/5 backdrop-blur dark:bg-white/10 dark:text-zinc-200;
+}
+
+.surface-panel {
+  @apply rounded-3xl border border-zinc-200/60 bg-white/90 p-8 shadow-xl shadow-black/10 backdrop-blur transition-all duration-200 hover:border-zinc-200 hover:shadow-2xl hover:shadow-black/10 dark:border-white/5 dark:bg-white/10;
+}
+
+.surface-muted {
+  @apply rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-lg shadow-black/10 backdrop-blur dark:border-white/5 dark:bg-white/10;
+}
+
+.holo-line {
+  background: linear-gradient(90deg, rgba(var(--accent, 139 92 246), 0.6), rgba(59, 130, 246, 0.4), rgba(16, 185, 129, 0.6));
+  height: 2px;
+  width: 100%;
+}
